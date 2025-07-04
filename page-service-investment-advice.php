@@ -26,7 +26,7 @@ get_header(); ?>
                         <h6 class="text-primary mb-4">¿Qué ofrecemos?</h6>
 
                             <div class="row g-4">
-                            <div class="col-4">
+                            <div class="col-12 col-sm-6 col-lg-4">
                                 <div class="d-flex align-items-center">
                                     <span class="badge bg-primary rounded-pill">1</span>
                                     <div class="ms-4">
@@ -35,7 +35,7 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-sm-6 col-lg-4">
                                 <div class="d-flex align-items-center">
                                    <span class="badge bg-primary rounded-pill">2</span>
                                     <div class="ms-4">
@@ -44,7 +44,7 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-sm-6 col-lg-4">
                                 <div class="d-flex align-items-center">
                                     <span class="badge bg-primary rounded-pill">3</span>
                                     <div class="ms-4">
@@ -52,7 +52,7 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-sm-6 col-lg-4">
                                 <div class="d-flex align-items-center">
                                     <span class="badge bg-primary rounded-pill">4</span>
                                     <div class="ms-4">
@@ -60,7 +60,7 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-sm-6 col-lg-4">
                                 <div class="d-flex align-items-center">
                                    <span class="badge bg-primary rounded-pill">5</span>
                                     <div class="ms-4">
@@ -68,7 +68,7 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-sm-6 col-lg-4">
                                 <div class="d-flex align-items-center">
                                    <span class="badge bg-primary rounded-pill">6</span>
                                     <div class="ms-4">
@@ -82,7 +82,7 @@ get_header(); ?>
 
                         <h1 class="mb-4">Estrategía de cobertura.</h1>
                         <div class="row g-4">
-                            <div class="col-4">
+                            <div class="col-12 col-sm-6 col-lg-4">
                                 <div class="d-flex align-items-center">
                                     <span class="badge bg-primary rounded-pill">1</span>
                                     <div class="ms-4">
@@ -91,7 +91,7 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-sm-6 col-lg-4">
                                 <div class="d-flex align-items-center">
                                    <span class="badge bg-primary rounded-pill">2</span>
                                     <div class="ms-4">
@@ -100,7 +100,7 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-sm-6 col-lg-4">
                                 <div class="d-flex align-items-center">
                                     <span class="badge bg-primary rounded-pill">3</span>
                                     <div class="ms-4">
@@ -108,7 +108,7 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-sm-6 col-lg-4">
                                 <div class="d-flex align-items-center">
                                     <span class="badge bg-primary rounded-pill">4</span>
                                     <div class="ms-4">
@@ -116,7 +116,7 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12 col-sm-6 col-lg-4">
                                 <div class="d-flex align-items-center">
                                    <span class="badge bg-primary rounded-pill">5</span>
                                     <div class="ms-4">
@@ -125,11 +125,16 @@ get_header(); ?>
                                 </div>
                             </div>
                         </div>
+                                               <div class="col-12 col-sm-6 mt-2">
+
+     <a href="<?php echo home_url('/contacto'); ?>" class="btn btn-primary rounded-pill py-3 px-5 mt-3">Contacta con un asesor <i class="fa fa-headphones text-white"></i></a>
+    </div>
                     </div>
                 </div>
+
                 <div class="col-lg-4 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="<?php echo get_template_directory_uri(); ?>/img/financial-trading-advisors.jpg" style="object-fit: cover;" alt="">
+                        <img alt="Asesores financieros y trading" class="position-absolute img-fluid w-100 h-100" src="<?php echo get_template_directory_uri(); ?>/img/financial-trading-advisors.jpg" style="object-fit: cover;" alt="">
                     </div>
                 </div>
             </div>

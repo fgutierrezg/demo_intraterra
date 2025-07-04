@@ -1,17 +1,14 @@
 <?php
 function intraterra_setup() {
-
-    /* echo var_dump(get_template_directory_uri() . '/lib/isotope/isotope.pkgd.min.js');
-    exit; */
-  
+    
     register_nav_menus(array(
         'main_menu' => 'Menú Principal',
     ));
     add_theme_support('title-tag');
-    
-add_theme_support( 'custom-logo' );
-add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'custom-logo' );
+    add_theme_support( 'post-thumbnails' );
 }
+
 add_action('after_setup_theme', 'intraterra_setup');
 
 function intraterra_enqueue_scripts() {
@@ -40,13 +37,12 @@ function intraterra_enqueue_scripts() {
     // Script principal del tema
     wp_enqueue_script( 'intraterra-main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0', true );
 }
-add_action('wp_enqueue_scripts', 'intraterra_enqueue_scripts');
 
-// Navwalker para Bootstrap
-require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+add_action('wp_enqueue_scripts', 'intraterra_enqueue_scripts');
 
 //Logica para contact-from
 add_action('init', 'process_contact_form');
+
 function process_contact_form() {
     if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['cf-name'])) {
           $name    = sanitize_text_field($_POST["cf-name"]);
@@ -54,11 +50,11 @@ function process_contact_form() {
     $phone   = sanitize_text_field($_POST["cf-phone"]);
     $message = sanitize_textarea_field($_POST["cf-message"]);
 
-    $to      = "francisco.gutierrez.g@live.cl";
-    $subject = "Mensaje desde formulario de contacto";
+    $to      = ["mmorales@intraterra.cl", "intraterra@intraterra.cl","francisco.gutierrez.g@live.cl"];
+    $subject = "Mensaje formulario de contacto Test Intraterra";
     $headers = array('Content-Type: text/html; charset=UTF-8', "Reply-To: $email");
     $body    = "
-        <h2>Nuevo mensaje desde el sitio web</h2>
+        <h2>Nuevo mensaje desde formulario de contacto</h2>
         <p><strong>Nombre:</strong> $name</p>
         <p><strong>Email:</strong> $email</p>
         <p><strong>Teléfono:</strong> $phone</p>
@@ -66,15 +62,36 @@ function process_contact_form() {
     ";
 
     if (wp_mail($to, $subject, $body, $headers)) {
-           echo '<div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
-            ¡Gracias! Tu mensaje ha sido enviado correctamente.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
-          </div>';
+        echo '<script>alert("¡Gracias! Tu mensaje ha sido enviado correctamente.");</script>';
     } else {
-       echo '<div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
-            Hubo un problema al enviar el mensaje. Intenta nuevamente.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
-          </div>';
+        echo '<script>alert("Hubo un problema al enviar el mensaje. Intenta nuevamente.");</script>';
     }
     }
 }
+
+add_filter('allowed_block_types_all', 'limit_blocks_gutenberg', 10, 2);
+
+function limit_blocks_gutenberg($allowed_blocks, $editor_context) {
+
+    if (!empty($editor_context->post) && $editor_context->post->post_type === 'page') {
+        return [
+            'core/image',
+            'core/gallery',
+            'core/video',
+            'core/embed', // para YouTube
+        ];
+    }
+
+    return $allowed_blocks;
+}
+
+
+require_once get_template_directory() . '/inc/metaboxes/project-metaboxes.php';
+require_once get_template_directory() . '/inc/metaboxes/carrousel-metaboxes.php';
+require_once get_template_directory() . '/inc/cpt/project.php';
+require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php'; // Navwalker para Bootstrap
+
+
+
+
+

@@ -27,57 +27,64 @@ get_header(); ?>
                         <h1 class="mb-4">Asesoría experta acorde a tus objetivos y perfil.</h1>
                         <p class="">Un equipo profesional y responsable de ofrecer las mejores alternativas de inversión a nivel local e internacional para nuestros clientes personas.</p>
                         <p class=""><strong>Generamos una relación de confianza y te orientamos según tus necesidades:</strong> Nuestro equipo de gestores patrimoniales asesora a personas naturales, fundaciones, sociedades de inversión y family offices.</p>                         
-                        <div class="row g-4">
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="btn-lg-square bg-primary rounded-circle">
-                                        <i class="fa fa-check text-white"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-0">Calidad</p>
-                                        <h5 class="mb-0">Garantizada</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="btn-lg-square bg-primary rounded-circle">
-                                        <i class="fa fa-user-check text-white"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-0">Asesores</p>
-                                        <h5 class="mb-0">Expertos</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="btn-lg-square bg-primary rounded-circle">
-                                        <i class="fa fa-drafting-compass text-white"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-0">Consulta</p>
-                                        <h5 class="mb-0">Sin compromiso</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="btn-lg-square bg-primary rounded-circle">
-                                        <i class="fa fa-headphones text-white"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-0">Soporte</p>
-                                        <h5 class="mb-0">Multiplataforma</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                   <div class="row g-4">
+    <div class="col-12 col-sm-6">
+        <div class="d-flex align-items-center">
+            <div class="btn-lg-square bg-primary rounded-circle flex-shrink-0">
+                <i class="fa fa-check text-white"></i>
+            </div>
+            <div class="ms-4">
+                <p class="mb-0">Calidad</p>
+                <h5 class="mb-0">Garantizada</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6">
+        <div class="d-flex align-items-center">
+            <div class="btn-lg-square bg-primary rounded-circle flex-shrink-0">
+                <i class="fa fa-user-check text-white"></i>
+            </div>
+            <div class="ms-4">
+                <p class="mb-0">Asesores</p>
+                <h5 class="mb-0">Expertos</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6">
+        <div class="d-flex align-items-center">
+            <div class="btn-lg-square bg-primary rounded-circle flex-shrink-0">
+                <i class="fa fa-drafting-compass text-white"></i>
+            </div>
+            <div class="ms-4">
+                <p class="mb-0">Consulta</p>
+                <h5 class="mb-0">Sin compromiso</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6">
+        <div class="d-flex align-items-center">
+            <div class="btn-lg-square bg-primary rounded-circle flex-shrink-0">
+                <i class="fa fa-headphones text-white"></i>
+            </div>
+            <div class="ms-4">
+                <p class="mb-0">Soporte</p>
+                <h5 class="mb-0">Multiplataforma</h5>
+            </div>
+        </div>
+        
+    </div>
+
+       <div class="col-12 col-sm-6">
+
+     <a href="<?php echo home_url('/contacto'); ?>" class="btn btn-primary rounded-pill py-3 px-5 mt-3">Contacta con un asesor <i class="fa fa-headphones text-white"></i></a>
+    </div>
+</div>
+
                     </div>
                 </div>
                 <div class="col-lg-4 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="<?php echo get_template_directory_uri(); ?>/img/financial-advisors.jpg" style="object-fit: cover;" alt="">
+                        <img alt="Asesores financieros" class="position-absolute img-fluid w-100 h-100" src="<?php echo get_template_directory_uri(); ?>/img/financial-advisors.jpg" style="object-fit: cover;" alt="">
                     </div>
                 </div>
             </div>

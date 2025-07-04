@@ -1,5 +1,4 @@
-
-    <!-- Footer Start -->
+<!-- Footer Start -->
     <div class="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -7,7 +6,10 @@
                     <h5 class="text-white mb-4">Dirección</h5>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Manuel Montt 357, Oficina 708, Curicó</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+56 75 2 414833 / +56 9 42651531</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>intraterra@intraterra.cl</p>
+                    <a href="mailto:intraterra@intraterra.cl" class="mb-2 d-block text-white">
+                        <i class="fa fa-envelope me-3"></i>intraterra@intraterra.cl
+                    </a>
+
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-light btn-social" href="https://www.x.com/"><i class="fas fa-times"></i></a>
                         <a class="btn btn-square btn-outline-light btn-social" href="https://www.facebook.com/intra.terra.1"><i class="fab fa-facebook-f"></i></a>
@@ -29,30 +31,8 @@
                         ?>
                 </div>
 
-                
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Galería de Proyectos</h5>
-                    <div class="row g-2">
-                        <div class="col-4">
-                            <img class="img-fluid rounded" src="<?php echo get_template_directory_uri(); ?>/img/gallery-1.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded" src="<?php echo get_template_directory_uri(); ?>/img/gallery-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded" src="<?php echo get_template_directory_uri(); ?>/img/gallery-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded" src="<?php echo get_template_directory_uri(); ?>/img/gallery-4.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded" src="<?php echo get_template_directory_uri(); ?>/img/gallery-5.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded" src="<?php echo get_template_directory_uri(); ?>/img/gallery-6.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
+                <?php get_template_part('template-parts/project-gallery'); ?>
+
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Boletín</h5>
                     <p>Ingresa tu email para no perderte ninguna novedad</p>
@@ -79,10 +59,40 @@
     </div>
     <!-- Footer End -->
 
+    <!-- Botón trading -->
+    <a href="#" 
+    class="btn btn-lg btn-lg-square rounded-circle trading-float-btn text-white" 
+    style="position: fixed; bottom: 200px; left: 5px; z-index: 9999;background-color: #0E036B;" aria-label="Trading" 
+    data-bs-toggle="modal" data-bs-target="#tradingModal">
+        <i class="bi bi-graph-up"></i>
+    </a>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- Botón noticias -->
+    <a href="<?php echo home_url('/noticias'); ?>" 
+    class="btn btn-lg btn-lg-square rounded-circle text-white" 
+    style="position: fixed; bottom: 140px; left: 5px; z-index: 9999;background-color:#cc0d0d;" aria-label="Noticias económicas" 
+    data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top"  data-bs-container="body" data-bs-content="Noticias económicas">
+        <i class="bi bi-newspaper"></i>
+    </a>
 
+
+    <!-- Botón subir -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top" 
+    style="; position: fixed; bottom: 50px; right: 20px; z-index: 9999;">
+    <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- Botón WhatsApp -->
+  
+    <a href="https://wa.me/56942651531?text=Me%20gustaria%20saber%20mas%20de%20sus%20servicios" target="_blank" rel="noopener" 
+    class="btn btn-lg btn-success btn-lg-square rounded-circle whatsapp-float" 
+    aria-label="Contáctanos por WhatsApp" 
+    data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="top"  data-bs-container="body" data-bs-content="Contáctanos por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+    </a>
+
+
+     <?php get_template_part('template-parts/modal-footer'); ?>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
